@@ -1,8 +1,13 @@
-.card {
- height: 600px;
- width: 400px;
- background-color: green;
+body {
+  height: 100%;
 }
-.numero {
- align-items: center;
+
+
+#card {
+  border: 1px solid black;
+  margin: 50px 150px 150px 50px;
+  background-color: lightblue;
 }
+
+
+
