@@ -12,16 +12,27 @@ function raimag() {
   imagarray[1] = "&clubs;"; //trebol
   imagarray[2] = "&hearts;"; //Corazones
   imagarray[3] = "&diams;"; //diamantes
-  var i = Math.floor(Math.random() * 3) + 0;
+  var i = Math.floor(Math.random() * 4);
   return imagarray[i];
 }
 
 window.onload = function() {
   var imagrandom = new String(raimag());
+  var numcarta = Math.floor(Math.random() * 13);
 
-  var numcarta = Math.floor(Math.random() * 12) + 0;
+  if (imagrandom == "&hearts;" || imagrandom == "&diams;") {
+    document.getElementById("card").innerHTML =
+      '<div id="pinta-topred"></div><div id="numero"></div><div id="pinta-downred"></div>';
 
-  document.getElementById("pinta-top").innerHTML = imagrandom.valueOf();
-  document.getElementById("numero").innerHTML = numcarta;
-  document.getElementById("pinta-down").innerHTML = imagrandom.valueOf();
+    document.getElementById("pinta-topred").innerHTML = imagrandom.valueOf();
+    document.getElementById("numero").innerHTML = numcarta;
+    document.getElementById("pinta-downred").innerHTML = imagrandom.valueOf();
+  } else {
+    document.getElementById("card").innerHTML =
+      '<div id="pinta-top"></div><div id="numero"></div><div id="pinta-down"></div>';
+
+    document.getElementById("pinta-top").innerHTML = imagrandom.valueOf();
+    document.getElementById("numero").innerHTML = numcarta;
+    document.getElementById("pinta-down").innerHTML = imagrandom.valueOf();
+  }
 };

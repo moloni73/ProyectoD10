@@ -13,23 +13,36 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background: green;
         }
 
 		#card {
 		border: 1px solid black;
 		margin: 25px 125px 25px 125px;
 		background-color: lightblue;
-        height:84%;
-        width:60%;
+        height:80%;
+        width:35%;
+        border-radius:20px;
+        background: white;
 
 		}
         #pinta-top{
 
-        font-size: 50px;
+        font-size: 75px;
         display: block;
-        text-align: left;
         height:10%;
         overflow:auto;
+        padding-left:20px;
+
+        }
+        #pinta-topred{
+
+        font-size: 75px;
+        display: block;
+        height:10%;
+        overflow:auto;
+        padding-left:20px;
+        color:red;
 
         }
 
@@ -44,11 +57,23 @@
 
         #pinta-down{
 
-            font-size: 50px;
-            text-align: right;
+            font-size: 75px;
+            text-align:right;
             display: block;
             height:10%;
             overflow:auto;
+            padding-right:20px;
+        }
+
+        #pinta-downred{
+
+            font-size: 75px;
+            text-align:right;
+            display: block;
+            height:10%;
+            overflow:auto;
+            padding-right:20px;
+            color:red;
 
         }
 
@@ -60,10 +85,6 @@
     <body id="padre">
 
     <div id="card">
-
-        <div id="pinta-top"></div>
-        <div id="numero"></div>
-        <div id="pinta-down"></div>
 
     </div>
 
